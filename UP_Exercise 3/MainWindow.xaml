@@ -1,0 +1,132 @@
+﻿<Window x:Class="UP_Exercise_3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UP_Exercise_3"
+        mc:Ignorable="d"
+        Title="Методы строк Демьянов_2ПКС-220" 
+        ResizeMode="NoResize" SizeToContent="WidthAndHeight" MinHeight="450" MinWidth="900">
+    <Grid>
+        <TabControl Width="890" Height="400" Margin="25,15,25,60">
+            <TabItem Header="Contains">
+                <Grid>
+                    <Button x:Name="contains" Content="Получить результат" Style="{DynamicResource ButtonStyle}" Click="Contains_Click"  Height="40" Width="300" Margin="155,269,429,63" />
+
+                    <Label Content="Исходная строка" Style="{DynamicResource LabelStyle}" Margin="25,26,599,295" />
+                    <Label Content="Подстрока/символ" Style="{DynamicResource LabelStyle}" Margin="325,26,299,295" />
+
+                    <TextBox Name="contains_first_string" Style="{DynamicResource TextBoxStyle}" Height="170" Width="260" Margin="25,82,599,120"/>
+                    <TextBox Name="contains_second_string" Style="{DynamicResource TextBoxStyle}" Height="170" Width="260" Margin="325,82,299,120"/>
+                    <TextBox Name="contains_result" IsReadOnly="True" Style="{DynamicResource TextBoxStyle}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="30" Width="120" Margin="245,324,519,18"/>
+
+                    <Label Content="Описание метода" Style="{DynamicResource LabelStyle}" Margin="604,26,20,295" />
+                    <Border Style="{DynamicResource BorderStyle}" Height="272" Width="250" Margin="609,82,25,18">
+                        <ScrollViewer Margin="1, 1, 1, 1" VerticalScrollBarVisibility="Auto">
+                            <TextBlock x:Name="contains_text" Style="{DynamicResource TextBlockStyle}" Margin ="10,10,10,10"/>
+                        </ScrollViewer>
+                    </Border>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Concat">
+                <Grid>
+                    <Button x:Name="concat" Content="Получить результат" Style="{DynamicResource ButtonStyle}" Click="Concat_Click"  Height="40" Width="300" Margin="155,198,429,134" />
+
+                    <Label Content="Первая строка" Style="{DynamicResource LabelStyle}" Margin="25,26,599,295" />
+                    <Label Content="Вторая строка" Style="{DynamicResource LabelStyle}" Margin="325,26,299,295" />
+
+                    <TextBox Name="concat_first_string" Style="{DynamicResource TextBoxStyle}" Height="100" Width="260" Margin="25,82,599,190"/>
+                    <TextBox Name="concat_second_string" Style="{DynamicResource TextBoxStyle}" Height="100" Width="260" Margin="325,82,299,190"/>
+                    <TextBox Name="concat_result" IsReadOnly="True" Style="{DynamicResource TextBoxStyle}" Height="100" Width="350" Margin="130,254,404,18"/>
+
+                    <Label Content="Описание метода" Style="{DynamicResource LabelStyle}" Margin="604,26,20,295" />
+                    <Border Style="{DynamicResource BorderStyle}" Height="272" Width="250" Margin="609,82,25,18">
+                        <ScrollViewer Margin="1, 1, 1, 1" VerticalScrollBarVisibility="Auto">
+                            <TextBlock x:Name="concat_text" Style="{DynamicResource TextBlockStyle}" Margin ="10,10,10,10"/>
+                        </ScrollViewer>
+                    </Border>
+                </Grid>
+            </TabItem>
+            <TabItem Header="EndsWith">
+                <Grid>
+                    <Button x:Name="endswith" Content="Получить результат" Style="{DynamicResource ButtonStyle}" Click="EndsWith_Click"  Height="40" Width="300" Margin="155,269,429,63" />
+
+                    <Label Content="Исходная строка" Style="{DynamicResource LabelStyle}" Margin="25,26,599,295" />
+                    <Label Content="Подстрока/символ" Style="{DynamicResource LabelStyle}" Margin="325,26,299,295" />
+
+                    <TextBox Name="endswith_first_string" Style="{DynamicResource TextBoxStyle}" Height="170" Width="260" Margin="25,82,599,120"/>
+                    <TextBox Name="endswith_second_string" Style="{DynamicResource TextBoxStyle}" Height="170" Width="260" Margin="325,82,299,120"/>
+                    <TextBox Name="endswith_result" IsReadOnly="True" Style="{DynamicResource TextBoxStyle}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="30" Width="120" Margin="245,324,519,18"/>
+
+                    <Label Content="Описание метода" Style="{DynamicResource LabelStyle}" Margin="604,26,20,295" />
+                    <Border Style="{DynamicResource BorderStyle}" Height="272" Width="250" Margin="609,82,25,18">
+                        <ScrollViewer Margin="1, 1, 1, 1" VerticalScrollBarVisibility="Auto">
+                            <TextBlock x:Name="endswith_text" Style="{DynamicResource TextBlockStyle}" Margin ="10,10,10,10"/>
+                        </ScrollViewer>
+                    </Border>
+                </Grid>
+            </TabItem>
+            <TabItem Header="IndexOf/LastIndexOf">
+                <Grid>
+                    <Button x:Name="index" Content="Получить результат" Style="{DynamicResource ButtonStyle}" Click="Index_Click"  Height="40" Width="300" Margin="155,218,429,114" />
+
+                    <Label Content="Исходная строка" Style="{DynamicResource LabelStyle}" Margin="25,26,599,295" />
+                    <Label Content="Подстрока/символ" Style="{DynamicResource LabelStyle}" Margin="325,26,299,295" />
+
+                    <TextBox Name="index_first_string" Style="{DynamicResource TextBoxStyle}" Height="120" Width="260" Margin="25,82,599,170"/>
+                    <TextBox Name="index_second_string" Style="{DynamicResource TextBoxStyle}" Height="120" Width="260" Margin="325,82,299,170"/>
+                    <TextBox Name="index_result" IsReadOnly="True" Style="{DynamicResource TextBoxStyle}" Height="80" Width="300" Margin="155,274,429,18"/>
+
+                    <Label Content="Описание метода" Style="{DynamicResource LabelStyle}" Margin="604,26,20,295" />
+                    <Border Style="{DynamicResource BorderStyle}" Height="272" Width="250" Margin="609,82,25,18">
+                        <ScrollViewer Margin="1, 1, 1, 1" VerticalScrollBarVisibility="Auto">
+                            <TextBlock x:Name="index_text" Style="{DynamicResource TextBlockStyle}" Margin ="10,10,10,10"/>
+                        </ScrollViewer>
+                    </Border>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Insert">
+                <Grid>
+                    <Button x:Name="insert" Content="Получить результат" Style="{DynamicResource ButtonStyle}" Click="Insert_Click"  Height="40" Width="300" Margin="155,242,429,90" />
+
+                    <Label Content="Первая строка" Style="{DynamicResource LabelStyle}" Margin="25,26,599,295" />
+                    <Label Content="Вторая строка" Style="{DynamicResource LabelStyle}" Margin="325,26,299,295" />
+                    <Label Content="Индекс" Style="{DynamicResource LabelStyle}" Margin="175,137,449,196" />
+
+                    <TextBox Name="insert_first_string" Style="{DynamicResource TextBoxStyle}" Height="50" Width="260" Margin="25,82,599,240"/>
+                    <TextBox Name="insert_second_string" Style="{DynamicResource TextBoxStyle}" Height="50" Width="260" Margin="325,82,299,240"/>
+                    <TextBox Name="insert_index" Style="{DynamicResource TextBoxStyle}" VerticalContentAlignment="Center" Height="40" Width="260" Margin="175,181,449,151"/>
+                    <TextBox Name="insert_result" IsReadOnly="True" Style="{DynamicResource TextBoxStyle}" Height="50" Width="300" Margin="155,304,429,18"/>
+
+                    <Label Content="Описание метода" Style="{DynamicResource LabelStyle}" Margin="604,26,20,295" />
+                    <Border Style="{DynamicResource BorderStyle}" Height="272" Width="250" Margin="609,82,25,18">
+                        <ScrollViewer Margin="1, 1, 1, 1" VerticalScrollBarVisibility="Auto">
+                            <TextBlock x:Name="insert_text" Style="{DynamicResource TextBlockStyle}" Margin ="10,10,10,10"/>
+                        </ScrollViewer>
+                    </Border>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Join">
+                <Grid>
+                    <Button x:Name="join" Content="Получить результат" Style="{DynamicResource ButtonStyle}" Click="Join_Click"  Height="40" Width="300" Margin="155,202,429,130" />
+
+                    <Label Content="Исходный массив строк" Style="{DynamicResource LabelStyle}" Margin="25,26,599,295" />
+                    <Label Content="Разделитель" Style="{DynamicResource LabelStyle}" Margin="325,26,299,295" />
+
+                    <TextBox Name="join_first_string" Style="{DynamicResource TextBoxStyle}" Height="100" Width="260" Margin="25,82,599,170"/>
+                    <TextBox Name="join_second_string" Style="{DynamicResource TextBoxStyle}" Height="100" Width="260" Margin="325,82,299,170"/>
+                    <TextBox Name="join_result" IsReadOnly="True" Style="{DynamicResource TextBoxStyle}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="100" Width="300" Margin="155,254,429,18"/>
+
+                    <Label Content="Описание метода" Style="{DynamicResource LabelStyle}" Margin="604,26,20,295" />
+                    <Border Style="{DynamicResource BorderStyle}" Height="272" Width="250" Margin="609,82,25,18">
+                        <ScrollViewer Margin="1, 1, 1, 1" VerticalScrollBarVisibility="Auto">
+                            <TextBlock x:Name="join_text" Style="{DynamicResource TextBlockStyle}" Margin ="10,10,10,10"/>
+                        </ScrollViewer>
+                    </Border>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        
+        <Button x:Name="button_exit" Content="Выход" Style="{DynamicResource ButtonStyle}" Click="Main_Exit_Click" Height="40" Width="150" Margin="775,425,15,10" />
+    </Grid>
+</Window>
