@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace UP_Exercise_3
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -48,7 +45,6 @@ namespace UP_Exercise_3
                 index_result.Text = $"Индекс первого вхождения: {index_first_string.Text.IndexOf(index_second_string.Text).ToString()}" +
                                 $" \nИндекс последнего вхождения: {index_first_string.Text.LastIndexOf(index_second_string.Text).ToString()}";
             }
-            
         }
         private void Insert_Click(object sender, RoutedEventArgs e)
         {
