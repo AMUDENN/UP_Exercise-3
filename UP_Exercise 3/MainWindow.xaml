@@ -125,6 +125,103 @@
                     </Border>
                 </Grid>
             </TabItem>
+            <TabItem Header="Replace">
+                <Grid>
+                    <Button x:Name="replace" Content="Получить результат" Style="{DynamicResource ButtonStyle}" Click="Replace_Click"  Height="40" Width="300" Margin="155,242,429,90" />
+
+                    <Label Content="Исходная строка" Style="{DynamicResource LabelStyle}" Margin="175,26,449,295" />
+                    <Label Content="Заменяемая подстрока" Style="{DynamicResource LabelStyle}" Margin="25,137,599,196" />
+                    <Label Content="Заменяющая строка" Style="{DynamicResource LabelStyle}" Margin="325,137,299,196" />
+
+                    <TextBox Name="replace_string" Style="{DynamicResource TextBoxStyle}" Height="50" Width="360" Margin="125,82,399,240"/>
+                    <TextBox Name="replace_old_string" Style="{DynamicResource TextBoxStyle}" Height="40" Width="260" Margin="25,181,599,151"/>
+                    <TextBox Name="replace_new_string" Style="{DynamicResource TextBoxStyle}" Height="40" Width="260" Margin="325,181,299,151"/>
+                    <TextBox Name="replace_result" IsReadOnly="True" Style="{DynamicResource TextBoxStyle}" Height="50" Width="300" Margin="155,304,429,18"/>
+
+                    <Label Content="Описание метода" Style="{DynamicResource LabelStyle}" Margin="604,26,20,295" />
+                    <Border Style="{DynamicResource BorderStyle}" Height="272" Width="250" Margin="609,82,25,18">
+                        <ScrollViewer Margin="1, 1, 1, 1" VerticalScrollBarVisibility="Auto">
+                            <TextBlock x:Name="replace_text" Style="{DynamicResource TextBlockStyle}" Margin ="10,10,10,10"/>
+                        </ScrollViewer>
+                    </Border>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Split">
+                <Grid>
+                    <Button x:Name="split" Content="Получить результат" Style="{DynamicResource ButtonStyle}" Click="Split_Click"  Height="40" Width="300" Margin="155,202,429,130" />
+
+                    <Label Content="Исходная строка" Style="{DynamicResource LabelStyle}" Margin="25,26,599,295" />
+                    <Label Content="Разделитель" Style="{DynamicResource LabelStyle}" Margin="325,26,299,295" />
+
+                    <TextBox Name="split_first_string" Style="{DynamicResource TextBoxStyle}" Height="100" Width="260" Margin="25,82,599,170"/>
+                    <TextBox Name="split_second_string" Style="{DynamicResource TextBoxStyle}" Height="100" Width="260" Margin="325,82,299,170"/>
+                    <TextBox Name="split_result" IsReadOnly="True" Style="{DynamicResource TextBoxStyle}" Height="100" Width="300" Margin="155,254,429,18"/>
+
+                    <Label Content="Описание метода" Style="{DynamicResource LabelStyle}" Margin="604,26,20,295" />
+                    <Border Style="{DynamicResource BorderStyle}" Height="272" Width="250" Margin="609,82,25,18">
+                        <ScrollViewer Margin="1, 1, 1, 1" VerticalScrollBarVisibility="Auto">
+                            <TextBlock x:Name="split_text" Style="{DynamicResource TextBlockStyle}" Margin ="10,10,10,10"/>
+                        </ScrollViewer>
+                    </Border>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Substring">
+                <Grid>
+                    <Button x:Name="substring" Content="Получить результат" Style="{DynamicResource ButtonStyle}" Click="Substring_Click"  Height="40" Width="300" Margin="155,252,429,80" />
+
+                    <Label Content="Исходная строка" Style="{DynamicResource LabelStyle}" Margin="175,26,449,295" />
+                    <Label Content="Начальный индекс" Style="{DynamicResource LabelStyle}" HorizontalContentAlignment="Right" Margin="25,146,638,186" />
+                    <Label Content="Длина подстроки" Style="{DynamicResource LabelStyle}" HorizontalContentAlignment="Right" Margin="25,198,638,134" />
+
+                    <TextBox Name="substring_string" Style="{DynamicResource TextBoxStyle}" Height="50" Width="360" Margin="125,82,399,240"/>
+                    <TextBox Name="substring_start" Style="{DynamicResource TextBoxStyle}" Height="40" Width="260" Margin="286,146,338,186"/>
+                    <TextBox Name="substring_length" Style="{DynamicResource TextBoxStyle}" Height="40" Width="260" Margin="286,198,338,134"/>
+                    <TextBox Name="substring_result" IsReadOnly="True" Style="{DynamicResource TextBoxStyle}" Height="50" Width="300" Margin="155,304,429,18"/>
+
+                    <Label Content="Описание метода" Style="{DynamicResource LabelStyle}" Margin="604,26,20,295" />
+                    <Border Style="{DynamicResource BorderStyle}" Height="272" Width="250" Margin="609,82,25,18">
+                        <ScrollViewer Margin="1, 1, 1, 1" VerticalScrollBarVisibility="Auto">
+                            <TextBlock x:Name="substring_text" Style="{DynamicResource TextBlockStyle}" Margin ="10,10,10,10"/>
+                        </ScrollViewer>
+                    </Border>
+                </Grid>
+            </TabItem>
+            <TabItem Header="ToUpper/ToLower">
+                <Grid>
+                    <Button x:Name="toul" Content="Получить результат" Style="{DynamicResource ButtonStyle}" Click="ToUL_Click"  Height="40" Width="300" Margin="155,198,429,134" />
+
+                    <Label Content="Строка" Style="{DynamicResource LabelStyle}" Margin="175,26,449,295" />
+
+                    <TextBox Name="toul_string" Style="{DynamicResource TextBoxStyle}" Height="100" Width="500" Margin="55,82,329,190"/>
+                    <TextBox Name="toul_result" IsReadOnly="True" Style="{DynamicResource TextBoxStyle}" Height="100" Width="500" Margin="55,254,329,18"/>
+
+                    <Label Content="Описание метода" Style="{DynamicResource LabelStyle}" Margin="604,26,20,295" />
+                    <Border Style="{DynamicResource BorderStyle}" Height="272" Width="250" Margin="609,82,25,18">
+                        <ScrollViewer Margin="1, 1, 1, 1" VerticalScrollBarVisibility="Auto">
+                            <TextBlock x:Name="toul_text" Style="{DynamicResource TextBlockStyle}" Margin ="10,10,10,10"/>
+                        </ScrollViewer>
+                    </Border>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Trim">
+                <Grid>
+                    <Button x:Name="trim" Content="Получить результат" Style="{DynamicResource ButtonStyle}" Click="Trim_Click"  Height="40" Width="300" Margin="155,198,429,134" />
+
+                    <Label Content="Исходная строка" Style="{DynamicResource LabelStyle}" Margin="25,26,599,295" />
+                    <Label Content="Удаляемые символы" Style="{DynamicResource LabelStyle}" Margin="325,26,299,295" />
+
+                    <TextBox Name="trim_string" Style="{DynamicResource TextBoxStyle}" Height="100" Width="260" Margin="25,82,599,190"/>
+                    <TextBox Name="trim_char" Style="{DynamicResource TextBoxStyle}" Height="100" Width="260" Margin="325,82,299,190"/>
+                    <TextBox Name="trim_result" IsReadOnly="True" Style="{DynamicResource TextBoxStyle}" Height="100" Width="350" Margin="130,254,404,18"/>
+
+                    <Label Content="Описание метода" Style="{DynamicResource LabelStyle}" Margin="604,26,20,295" />
+                    <Border Style="{DynamicResource BorderStyle}" Height="272" Width="250" Margin="609,82,25,18">
+                        <ScrollViewer Margin="1, 1, 1, 1" VerticalScrollBarVisibility="Auto">
+                            <TextBlock x:Name="trim_text" Style="{DynamicResource TextBlockStyle}" Margin ="10,10,10,10"/>
+                        </ScrollViewer>
+                    </Border>
+                </Grid>
+            </TabItem>
         </TabControl>
         
         <Button x:Name="button_exit" Content="Выход" Style="{DynamicResource ButtonStyle}" Click="Main_Exit_Click" Height="40" Width="150" Margin="775,425,15,10" />
